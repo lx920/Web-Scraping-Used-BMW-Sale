@@ -16,4 +16,4 @@ Selenium Package plays a big role in this project. It outperforms request/get wh
 4: Identify Next Page buttons\
 5: Micmic page scrolling to load more features\
 6: Scrape features\
-7: Connect and write to MySQL database\
+7: Connect and write to MySQL database
