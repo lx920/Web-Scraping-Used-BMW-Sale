@@ -1,12 +1,19 @@
-# Web-Scraping-Used-BMW-Sale
-This is a project of scraping used BMW's sold in the Bay area. It aims at scraping car features such as VIN, year, make, model, mileage, engines, options, packages, imperfections etc from CARVANA web page. It is a nice way to scrape data for used car price analysis.
+# Used Car Price Prediction
+The used car market in the US in growing very fast. Luckily, we can easily access most companies' used car inventory data by web-scraiping. As company websites list their products for sale, we can scrape specific features from the listings and make a comprehensive dataset regarding any used car inventory. The scraped data will enable us to analyze price, feature partworth, sales trend, visualizations etc. I choose to scrape BMWs sold in the Bay area.
 
-The primary Python packaged used for the scrape is the Selenium package and chrome web driver. This is lesser-known than the most popular REQUEST and GET methods. However, it is much more powerful when there are a lot of things to control on the website.
+# Language
+Most of the frontend work is done by Python. It is pretty nice to use to scrape. The scraped data are saved into files and written into local MySQL database.
 
-Carvana website has a lot of things going-on in the background. To best scrape the information we want, we will need to imitate a human interaction with the website. Standard POST and GET is will not get a satisfactory result due to the complexity of the website.
+# Packages
+Other than the more common packages for Python:
 
-The code tells the web driver to search for BMW listed around San Fransico, ZIP CODE 94103. It then download the source code of the current page. After downloading, the code tells the browser to search for the "next page" button, click it, then download the content of the next page. This iteration ends after reaching the last page. The code saves all contents to local files and extract url for all the BMW listings.
+Selenium Package plays a big role in this project. It outperforms request/get when dealing with the BMW website. There were a lot of variables to control for when accessing BMW website. Selenium Package performs marvelously in micmicing a human inaction with the web-browser and enables us to scrape the information we want.
 
-It also opens all the BMW url one by one. After opening, it scrolls all the way down to load everything that may be hidden behind "load more". Now we have everything related to every BMW ready to download!
-
-Once all is done, the scraped items are saved in a MySQL database.
+# Tackled Problems
+1: Zipcode + Radius Search Post Request
+2: Mimicing Mouse Click and Keyboard Entering
+3: Extract Car URL from each Page Source
+4: Identify Next Page buttons
+5: Micmic page scrolling to load more features
+6: Scrape features
+7: Connect and write to MySQL database
